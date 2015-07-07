@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+	<head>
+		<link rel="stylesheet" href="engine/material.min.css" />
+		<script src="engine/material.min.js"></script>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons" />
+	</head>
+
+	<body>
+		<!-- Accent-colored raised button with ripple -->
+		<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect">
+		Button
+		</button>
+		<!-- Colored FAB button -->
+		<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--colored">
+		<em class="material-icons">add</em>
+		</button>
+
+		<div id="container"/>
+		<script>
+			var button = document.createElement('button');
+			var textNode = document.createTextNode('Click Me!');
+			button.appendChild(textNode);
+			button.className = 'mdl-button mdl-js-button mdl-js-ripple-effect';
+			componentHandler.upgradeElement(button, 'MaterialButton');
+			document.getElementById('container').appendChild(button);
+		</script>
+	</body>
+</html>
